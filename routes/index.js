@@ -1,10 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var db = require('../db');
+var userController = require('.././controllers/user.controller');
+var mainController = require('../controllers/main.controller');
+
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', {title: 'Resume Builder'});
-});
+router.get('/', mainController.getHomePage);
+
+router.get('/login', mainController.redirectToHome);
+
+router.get('/signup', mainController.redirectToHome);
+
+router.post('/login', userController.login);
+
+router.post('/signup', userController.signup);
 
 module.exports = router;
