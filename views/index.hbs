@@ -4,33 +4,17 @@
         <p>Build Your Resume in a few simple steps</p>
     </div>
 
-    {{#if this.signedup}}
+    {{#if successMessage.length}}
         <div class="alert alert-success alert-dismissible fade show success-message" role="alert">
-            <strong>Sucessfully Created Account!! Please Login to Continue.</strong>
+            <strong>{{successMessage}}</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
     {{/if}}
-    {{#if this.userExists}}
-        <div class="alert alert-danger alert-dismissible fade show warning-message-1" role="alert">
-            <strong>USER ALREADY EXISTS.</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    {{/if}}
-    {{#if this.incorrectPassword}}
-        <div class="alert alert-danger alert-dismissible fade show warning-message-2" role="alert">
-            <strong>Incorrect Password!!</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    {{/if}}
-    {{#if this.incorrectEmail}}
-        <div class="alert alert-danger alert-dismissible fade show warning-message-3" role="alert">
-            <strong>USER DOESN'T EXIST!</strong>
+    {{#if warningMessage.length}}
+        <div class="alert alert-danger alert-dismissible fade show warning-message" role="alert">
+            <strong>{{warningMessage}}</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -45,10 +29,8 @@
         {{!-- ------------------------- LOGIN FORM ------------------------- --}}
 
         <form class="land-login-form" id="login-form" action="/login" method="POST">
-            <label for="login-email" class="sr-only">Email ID</label>
-            <input type="email" name="login-email" id="login-email" class="form-control" placeholder="Email ID">
-            <label for="login-pwd" class="sr-only">Password</label>
-            <input type="password" name="login-pwd" id="login-pwd" class="form-control" placeholder="Password">
+            <input type="email" name="email" id="login-email" class="form-control" placeholder="Email ID">
+            <input type="password" name="password" id="login-pwd" class="form-control" placeholder="Password">
             <button type="submit" class="btn btn-success btn-block" id="login-btn">Login</button>
         </form>
 
@@ -59,21 +41,16 @@
         {{!-- ------------------------- SIGN UP FORM ------------------------- --}}
 
         <form class="land-signup-form" id="signup-form" action="/signup" method="POST">
-            <div class="row">
+            <div class="row index-row">
                 <div class="col">
-                    <label for="fname" class="sr-only">First Name</label>
                     <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name">
                 </div>
                 <div class="col">
-                    <label for="lname" class="sr-only">Last Name</label>
                     <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name">
                 </div>
             </div>
-            <label for="signup-email" class="sr-only">Email ID</label>
-            <input type="email" name="signup-email" id="signup-email" class="form-control" placeholder="Email ID">
-            <label for="signup-pwd" class="sr-only">Password</label>
-            <input type="password" name="signup-pwd" id="signup-pwd" class="form-control" placeholder="Password">
-            <label for="cpwd" class="sr-only">Confirm Password</label>
+            <input type="email" name="email" id="signup-email" class="form-control" placeholder="Email ID">
+            <input type="password" name="password" id="signup-pwd" class="form-control" placeholder="Password">
             <input type="password" name="cpwd" id="cpwd" class="form-control" placeholder="Confirm Password">
             <button type="submit" class="btn btn-success btn-block" id="signup-btn">Sign Up</button>
         </form>
@@ -81,7 +58,7 @@
         {{!-- --------------------------------------------------------- --}}
 
         <button class="btn btn-primary btn-sm" id="login">
-            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor"
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow index-row-left" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                     d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
@@ -92,7 +69,7 @@
 
         <p class="lead">- OR -</p>
         <button type="button" class="btn btn-primary" id="signup">Sign Up
-            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor"
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow index-row-right" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                     d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -105,13 +82,13 @@
 
 <section>
     <div class="container text-center">
-        <div class="row">
+        <div class="row index-row">
             <div class="col-lg-12">
                 <h1>CREATORS</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4">
+        <div class="row index-row">
+            <div class="col-lg-4 creator-card">
                 <div class="card">
                     <img src="https://www.generationsforpeace.org/wp-content/uploads/2016/10/dummy-member.jpg"
                         class="card-img-top" alt="" height="250" width="250">
@@ -121,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 creator-card">
                 <div class="card">
                     <img src="https://www.generationsforpeace.org/wp-content/uploads/2016/10/dummy-member.jpg"
                         class="card-img-top" alt="" height="250" width="250">
@@ -131,7 +108,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 creator-card">
                 <div class="card">
                     <img src="https://www.generationsforpeace.org/wp-content/uploads/2016/10/dummy-member.jpg"
                         class="card-img-top" alt="" height="250" width="250">
@@ -142,8 +119,8 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-around">
-            <div class="col-lg-4">
+        <div class="row index-row justify-content-around">
+            <div class="col-lg-4 creator-card">
                 <div class="card">
                     <img src="https://www.generationsforpeace.org/wp-content/uploads/2016/10/dummy-member.jpg"
                         class="card-img-top" alt="" height="250" width="250">
@@ -153,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 creator-card">
                 <div class="card">
                     <img src="https://www.generationsforpeace.org/wp-content/uploads/2016/10/dummy-member.jpg"
                         class="card-img-top" alt="" height="250" width="250">
@@ -168,3 +145,4 @@
 </section>
 
 {{>footer}}
+

@@ -1,2 +1,48 @@
-<h1>{{this.email}}</h1>
-<h1>{{this.password}}</h1>
+{{>profileHeader}}
+{{>sidenav}}
+
+<div>
+    <div class="main">
+        <div class="form-header">
+            <h2>RESUME DETAILS</h2>
+        </div>
+        
+        
+
+        <div class="accordion" id="form-body">
+            <button class="accordion-cs" id="basic-collapse-btn" data-toggle="collapse" data-target="#basic" type="button" aria-expanded="false" aria-controls="basic">Basic Information</button>
+            <div class="collapse" id="basic" data-parent="#form-body">{{>basicform}}</div>
+
+            <button class="accordion-cs" id="education-collapse-btn" data-toggle="collapse" data-target="#education" type="button" aria-expanded="false" aria-controls="education">Education</button>
+            <div class="collapse" id="education" data-parent="#form-body">{{>educationform}}</div>
+            
+            <button class="accordion-cs" id="project-collapse-btn" data-toggle="collapse" data-target="#project" type="button" aria-expanded="false" aria-controls="project">Projects</button>
+            <div class="collapse" id="project" data-parent="#form-body">{{>projectform}}</div>
+            
+            <button class="accordion-cs" id="misc-collapse-btn" data-toggle="collapse" data-target="#misc" type="button" aria-expanded="false" aria-controls="misc">Miscellanous</button>
+            <div class="collapse" id="misc" data-parent="#form-body">{{>miscform}}</div>
+            
+            <button class="accordion-cs" id="work-collapse-btn" data-toggle="collapse" data-target="#work" type="button" aria-expanded="false" aria-controls="work">Work Experience</button>
+            <div class="collapse" id="work" data-parent="#form-body">{{>workform}}</div>
+            
+            <button class="accordion-cs" id="endnote-collapse-btn" data-toggle="collapse" data-target="#endnote" type="button" aria-expanded="false" aria-controls="endnote">End Note</button>
+            <div class="collapse" id="endnote" data-parent="#form-body">{{>endnoteform}}</div>
+            
+            <div class="mt-5 text-center">
+                <button class="btn btn-lg btn-outline-success" id="proceed">Continue to next step..</button>
+            </div>
+        </div>
+
+        <div class="container template-body" id="template-body">
+            {{>templateform}}
+        </div>
+
+        
+    </div>
+    
+    {{!-- {{>footer}} --}}
+</div>
+
+{{>education-modal}}
+{{>project-modal}}
+{{>work-modal}}

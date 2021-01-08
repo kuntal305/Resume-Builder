@@ -1,0 +1,154 @@
+<div class="form-div" id="basic-div">
+    <div class="text-center" id="basic-spinner">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <form id="basic-form">
+        <div class="form-row">
+            <label for="firstname" class="col-sm-2 col-form-label">First Name<sup class="text-danger">*</sup>:</label>
+            <div class="form-group col-sm">
+                <input type="text" class="form-control input-sm" name="firstname" id="firstname">
+            </div>
+
+            <label for="lastname" class="col-sm-2 col-form-label">Last Name<sup class="text-danger">*</sup>:</label>
+            <div class="form-group col-sm">
+                <input type="text" class="form-control input-sm"name="lastname" id="lastname">
+            </div>
+        </div>
+        
+        
+        <div class="form-row">
+            <label for="email" class="col-sm-2 col-form-label">Email ID<sup class="text-danger">*</sup>:</label>
+            <div class="form-group col-sm">
+                <input type="email" class="form-control input-sm" id="email" name="email">
+            </div>
+
+            <label for="conatct" class="col-sm-2 col-form-label">Contact No<sup class="text-danger">*</sup>:</label>
+            <div class="form-group col-sm">
+                <input type="number" class="form-control input-sm" id="contact" name="contact">
+            </div>
+        </div>
+        
+        
+        <div class="form-row">
+            <label for="address" class="col-sm-2 col-form-label">Address<sup class="text-danger">*</sup>:</label>
+            <div class="form-group col">
+                <input type="text" class="form-control input-sm" id="address" name="address">
+            </div>
+        </div>
+        
+        
+        <div class="form-row">
+            <label for="sex" class="col-sm-2 col-form-label">Sex<sup class="text-danger">*</sup>:</label>
+            <div class="form-group col">
+                <select class="form-control input-sm" name="sex" id="sex">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Transgender">Transgender</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <label for="maritalstatus" class="col-sm-2 col-form-label">Marital Status<sup class="text-danger">*</sup>:</label>
+            <div class="form-group col">
+                <select class="form-control input-sm" id="maritalstatus" name="maritalstatus">
+                    <option value="Married">Married</option>
+                    <option value="Unmarried">Unmarried</option>
+                </select>
+            </div>
+        </div>
+        
+        
+        <div class="form-row">
+            <label for="dob" class="col-sm-2 col-form-label">D.O.B.<sup class="text-danger">*</sup>:</label>
+            <div class="form-group col">
+                <input type="date" class="form-control input-sm" id="dob" name="dob">
+            </div>
+            <label for="nationality" class="col-sm-2 col-form-label">Nationality<sup class="text-danger">*</sup>:</label>
+            <div class="form-group col">
+                <input type="text" class="form-control input-sm" id="nationality" name="nationality">
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <label for="passport" class="col-sm-2 col-form-label">Passport No:</label>
+            <div class="form-group col">
+                <input type="text" class="form-control input-sm" id="passport" name="passport">
+            </div>
+            <label for="pan" class="col-sm-2 col-form-label">PAN No.:</label>
+            <div class="form-group col">
+                <input type="text" class="form-control input-sm" id="pan" name="pan">
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <label for="profilephoto" class="col-sm-3 col-form-label">Resume Profile Picture:</label>
+            <div class="form-group col">
+                <input type="file" class="form-file-input col-sm-3" name="profilephoto" id="profilephoto" accept="image/*">
+            </div>
+            <label for="linkedin" class="col-sm-2 col-form-label">LinkedIn URL:</label>
+            <div class="form-group col-sm-4">
+                <input type="url" class="form-control input-sm" id="linkedin" name="linkedin">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col text-right">
+                <button class="btn btn-success btn-sm" id="saveBasic" type="button">Save</button>
+                <button class="btn btn-success btn-sm" id="updateBasicData" type="button">Update</button>
+            </div>
+        </div>
+    </form>
+    
+    <div class="basic-success-1">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center success mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">Your data has been saved successfully!!</p>
+                        <p class="lead">Click the button below to update your data!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="updateBasic">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="basic-success-2">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center success mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">Your data is already saved!!</p>
+                        <p class="lead">Click the button below to update your data!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="updateBasic">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="basic-fail">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center fail mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">An Error occured while saving your data!!</p>
+                        <p class="lead">Please Enter your Details Again!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="enterBasic">Re-Enter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="basic-error">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center error mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">An Error occured while fetching your data!!</p>
+                        <p class="lead">Please Refresh The Page!!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="refresh">Refresh Page</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

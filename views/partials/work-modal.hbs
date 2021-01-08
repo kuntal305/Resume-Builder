@@ -1,0 +1,58 @@
+
+<!-- Modal -->
+<div class="modal fade" id="workModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="workModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="workModalLabel">Work Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <label for="workModalOrgName" class="col-sm-3 col-form-label">Org. Name:</label>
+                    <div class="form-group col"> 
+                        <input type="text" id="workModalOrgName" name="workModalOrgName" class="form-control input-sm" disabled="disabled">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="workModalType" class="col-sm-3 col-form-label">Type:</label>
+                    <div class="form-group col">
+                        <select name="workModalType" id="workModalType" class="form-control input-sm" disabled="disabled">
+                            <option value="Internship">Internship</option>
+                            <option value="Full Time">Full Time</option>
+                            <option value="Part Time">Part Time</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="workModalStartYear" class="col-sm-3 col-form-label">Start Year:</label>
+                    <div class="form-group col">
+                        <input type="number" name="workModalStartYear" id="workModalStartYear" class="form-control input-sm" disabled="disabled">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="workModalEndYear" class="col-sm-3 col-form-label">End Year:</label>
+                    <div class="form-group col">
+                        <input type="number" name="workModalEndYear" id="workModalEndYear" class="form-control input-sm" disabled="disabled">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="workModalResp" class="col-sm-3 col-form-label">Responsibilities:</label>
+                    <div class="form-group col">
+                        <textarea name="workModalResp" id="workModalResp" cols="30" rows="2" class="form-control input-sm" disabled="disabled"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning mr-auto" id="cancelWorkModal">Cancel</button>
+                <button type="button" class="btn btn-danger mr-auto" id="deleteWorkModal">Delete</button>
+                <button type="button" class="btn btn-info" id="editWorkModal">Edit</button>
+                <button type="button" class="btn btn-primary" id="saveWorkModal">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeWorkModal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

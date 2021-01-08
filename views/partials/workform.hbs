@@ -1,0 +1,51 @@
+<div class="form-div">
+    <form id="work-form">
+        <div class="form-row">
+            <label for="workOrgName" class="col-sm-2 col-form-label">Organization Name:</label>
+            <div class="form-group col-sm-10">
+                <input type="text" id="workOrgName" name="workOrgName" class="form-control input-sm">
+            </div>
+            
+        </div>
+        <div class="form-row">
+            <label for="workType" class="col col-form-label">Type:</label>
+            <div class="form-group col">
+                <select name="workType" id="workType" class="form-control input-sm">
+                    <option value="Internship">Internship</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Part Time">Part Time</option>
+                </select>
+            </div>
+            <label for="workStartYear" class="col col-form-label">Start Year:</label>
+            <div class="form-group col">
+                <input type="number" name="workStartYear" id="workStartYear" class="form-control input-sm">
+            </div>
+            <label for="workEndYear" class="col col-form-label">End Year:</label>
+            <div class="form-group col">
+                <input type="number" name="workEndYear" id="workEndYear" class="form-control input-sm">
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="workResp" class="col-sm-2 col-form-label">Resposibilities:</label>
+            <div class="form-group col">
+                <textarea name="workResp" id="workResp" cols="30" rows="2" class="form-control input-sm"></textarea>
+            </div>
+        </div>
+    </form>
+    <div class="form-row">
+        <div class="col text-right mb-3">
+            <button class="btn btn-primary btn-sm" id="addWork" type="button">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path fill-rule="evenodd"
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>&nbsp;
+                Add Work Experience
+            </button>
+        </div>
+    </div>
+    <div class="row" id="work-row">
+        
+    </div>
+</div>

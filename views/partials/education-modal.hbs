@@ -1,0 +1,109 @@
+
+<div class="modal fade" id="educationModal" tabindex="-1" data-backdrop="static" aria-labelledby="educationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="educationModalLabel">Education Section Details</h5>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="alert alert-danger alert-dismissible fade show edu-update" role="alert">
+                        Your data couldn't be updated! <strong>Please Try again!</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form id="eduModal-form">
+                        <div class="row p-0 mb-2">
+                            <label for="degreeModal" class="col col-form-label">Degree/Certification:</label>
+                            <div class="col">
+                                <input type="text" id="degreeModal" name="degreeModal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mb-2">
+                            <label for="institutionModal" class="col col-form-label">Institution:</label>
+                            <div class="col">
+                                <input type="text" id="instituteModal" name="instituteModal" class="form-control input-sm"
+                                    disabled="disabled" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mb-2">
+                            <label for="authorityModal" class="col col-form-label">Board/University:</label>
+                            <div class="col">
+                                <input type="text" id="authorityModal" name="authorityModal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mb-2">
+                            <label for="startyearModal" class="col col-form-label">Start Year:</label>
+                            <div class="col">
+                                <input type="number" id="startyearModal" name="startyearModal" class="form-control input-sm"
+                                    disabled="disabled" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mb-2">
+                            <label for="endyearModal" class="col col-form-label">End Year:</label>
+                            <div class="col">
+                                <input type="number" id="endyearModal" name="endyearModal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mb-3">
+                            <label for="marksModal" class="col col-form-label">Percentage/CGPA:</label>
+                            <div class="col">
+                                <input type="number" id="marksModal" name="marksModal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                        </div>
+                        
+                        <div class="row p-0 mb-2">
+                            <label for="sem1Modal" class="col-sm-3 col-form-label">Sem 1:</label>
+                            <div class="col-sm-3">
+                                <input type="number" id="sem1Modal" name="sem1Modal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                            <label for="sem2Modal" class="col-sm-3 col-form-label">Sem 2:</label>
+                            <div class="col-sm-3">
+                                <input type="number" id="sem2Modal" name="sem2Modal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mb-2">
+                            <label for="sem3Modal" class="col-sm-3 col-form-label">Sem 3:</label>
+                            <div class="col-sm-3">
+                                <input type="number" id="sem3Modal" name="sem3Modal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                            <label for="sem4Modal" class="col-sm-3 col-form-label">Sem 4:</label>
+                            <div class="col-sm-3">
+                                <input type="number" id="sem4Modal" name="sem4Modal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mb-2">
+                            <label for="sem5Modal" class="col-sm-3 col-form-label">Sem 5:</label>
+                            <div class="col-sm-3">
+                                <input type="number" id="sem5Modal" name="sem5Modal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                            <label for="sem6Modal" class="col-sm-3 col-form-label">Sem 6:</label>
+                            <div class="col-sm-3">
+                                <input type="number" id="sem6Modal" name="sem6Modal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0">
+                            <label for="sem7Modal" class="col-sm-3 col-form-label">Sem 7:</label>
+                            <div class="col-sm-3">
+                                <input type="number" id="sem7Modal" name="sem7Modal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                            <label for="sem8Modal" class="col-sm-3 col-form-label">Sem 8:</label>
+                            <div class="col-sm-3">
+                                <input type="number" id="sem8Modal" name="sem8Modal" class="form-control input-sm" disabled="disabled" value="">
+                            </div>
+                        </div>
+                        <input type="number" id="eduIdModal" name="eduIdModal" value="">
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">    
+                <button type="button" class="btn btn-warning mr-auto" id="cancelEducationModal">Cancel</button>
+                <button type="button" class="btn btn-danger mr-auto" id="deleteEducationModal">Delete</button>
+                <button type="button" class="btn btn-info" id="editEducationModal">Edit</button>
+                <button type="button" class="btn btn-primary" id="saveEducationModal">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeEducationModal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

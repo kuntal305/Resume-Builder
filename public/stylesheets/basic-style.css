@@ -1,0 +1,12 @@
+.basic-success-1,
+.basic-fail,
+.basic-error,
+.basic-success-2 {
+    display: none;
+}
+
+#updateBasicData,
+#basic-form,
+#basic-spinner {
+    display: none;
+}

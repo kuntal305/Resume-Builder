@@ -1,0 +1,26 @@
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.card {
+    z-index: 1;
+    box-shadow: 3px 0 5px 6px rgba(209, 209, 209, 0.3);
+}
+
+.success,
+.fail,
+.error {
+    width: 15rem;
+}
+
+.success .lead,
+.fail .lead,
+.error .lead {
+    font-size: 1rem;
+}

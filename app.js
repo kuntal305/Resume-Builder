@@ -3,25 +3,29 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
-const app = express();
-
-const indexRouter = require('./routes/index');
-
-
-const handlebars = require('express-handlebars');
-
-const {v4: uuidv4} = require('uuid');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 const passport = require('passport');
-const flash = require('connect-flash');
+const flash = require('express-flash');
+const {v4: uuidv4} = require('uuid');
+
+const app = express();
+const http = require('http');
+
+
+const passportConfig = require('./passport');
+const indexRouter = require('./routes/index');
+const userRouter = require('./routes/user');
+
+const handlebars = require('express-handlebars');
+
 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs', handlebars({
   extname: 'hbs',
+  helpers: require('./public/javascripts/handlebars-helpers'),
   defaultLayout: 'layout.hbs'
 }));
 app.set('view engine', 'hbs');
@@ -30,14 +34,18 @@ app.use(session({
   genid: (req) => {
     return uuidv4();
   },
-  store: new FileStore(),
-  secret: 'SECRET',
+  // store: new FileStore(),
+  secret: 'secret',
   resave: true,
   saveUninitialized: true,
-  cookie: { maxAge: 100 * 60 * 60 * 24 * 30 }
+  cookie: { 
+    secure: false,
+    maxAge: 60 * 60 * 24 * 30
+  }
 }));
 app.use(flash());
 
+passportConfig(passport);
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -49,6 +57,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/userprofile', userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

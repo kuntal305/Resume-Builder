@@ -1,0 +1,54 @@
+
+<div class="modal fade" id="projectModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <label for="projectNameModal" class="col-sm-3 col-form-label">Project Name:</label>
+                    <div class="form-group col">
+                        <input type="text" class="form-control input-sm" disabled="disabled" id="projectNameModal" name="projectNameModal">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="projectOrgModal" class="col-sm-3 col-form-label">Org. Name:</label>
+                    <div class="form-group col">
+                        <input type="text" class="form-control input-sm" disabled="disabled" id="projectOrgModal" name="projectOrgModal">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="projectStartDateModal" class="col-sm-3 col-form-label">Start Date:</label>
+                    <div class="form-group col">
+                        <input type="date" class="form-control input-sm" disabled="disabled" id="projectStartDateModal" name="projectStartDateModal">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="projectEndDateModal" class="col-sm-3 col-form-label">End Date:</label>
+                    <div class="form-group col">
+                        <input type="date" class="form-control input-sm" disabled="disabled" id="projectEndDateModal" name="projectEndDateModal">
+                    </div>
+                </div>
+                <dv class="form-row">
+                    <label for="projectDescModal" class="col-sm-3 col-form-label">Description:</label>
+                    <div class="form-group col">
+                        <textarea name="projectDescModal" id="projectDescModal" class="form-control input-sm" disabled="disabled" cols="30" rows="2"></textarea>
+                    </div>
+                
+                </dv>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning mr-auto" id="cancelProjectModal">Cancel</button>
+                <button type="button" class="btn btn-danger mr-auto" id="deleteProjectModal">Delete</button>
+                <button type="button" class="btn btn-info" id="editProjectModal">Edit</button>
+                <button type="button" class="btn btn-primary" id="saveProjectModal">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeProjectModal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

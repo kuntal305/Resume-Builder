@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     // ======================= ONLOAD EVENTS =======================
     
     $('#signup-btn, #login-btn').attr('disabled', 'disabled')

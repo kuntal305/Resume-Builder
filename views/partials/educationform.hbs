@@ -1,0 +1,154 @@
+<div class="form-div">
+
+    <form id="education-form">
+
+        <div class="form-row">
+            <label for="degree" class="col-sm-2 col-form-label">Degree/Certification:</label>
+            <div class="form-group col-sm-2">
+                <input type="text" name="degree" id="degree" class="form-control">
+            </div>
+            <label for="institute" class="col-sm-2 col-form-label text-center">Institute Name:</label>
+            <div class="form-group col-sm-2">
+                <input type="text" name="institute" id="institute" class="form-control">
+            </div>
+            <label for="authority" class="col-sm-2 col-form-label text-center">Board/University:</label>
+            <div class="form-group col-sm-2">
+                <input type="text" name="authority" id="authority" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="startyear" class="col-sm-2 col-form-label">Start Year:</label>
+            <div class="form-group col-sm-2">
+                <input type="number" class="form-control" name="startyear" id="startyear">
+            </div>
+            <label for="endyear" class="col-sm-2 col-form-label text-center">End Year:</label>
+            <div class="form-group col-sm-2">
+                <input type="number" class="form-control" name="endyear" id="endyear">
+            </div>
+            <label for="marks" class="col-sm-2 col-form-label text-center">Percentage/CGPA:</label>
+            <div class="form-group col-sm-2">
+                <input type="number" name="marks" id="marks" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <input class="form-check-input" type="checkbox" id="sem-check" name="sem-check">
+                <label class="form-check-label text-info" for="sem-check">Check this box if you want to add semester
+                    marks.</label>
+            </div>
+        </div>
+        
+        <div class="form-row sem">
+            <div class="col">
+                <div class="form-row">
+                    <label for="" class="col-sm-1 col-form-label">Sem 1:</label>
+                    <div class="form-group col-sm-1">
+                        <input type="number" name="sem1" id="sem1" class="form-control">
+                    </div>
+                    <label for="" class="col-sm-1 col-form-label offset-1">Sem 2:</label>
+                    <div class="form-group col-sm-1">
+                        <input type="number" name="sem2" id="sem2" class="form-control">
+                    </div>
+                    <label for="" class="col-sm-1 col-form-label offset-1">Sem 3:</label>
+                    <div class="form-group col-sm-1">
+                        <input type="number" name="sem3" id="sem3" class="form-control">
+                    </div>
+                    <label for="" class="col-sm-1 col-form-label offset-1">Sem 4:</label>
+                    <div class="form-group col-sm-1">
+                        <input type="number" name="sem4" id="sem4" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="" class="col-sm-1 col-form-label">Sem 5:</label>
+                    <div class="form-group col-sm-1">
+                        <input type="number" name="sem5" id="sem5" class="form-control">
+                    </div>
+                    <label for="" class="col-sm-1 col-form-label offset-1">Sem 6:</label>
+                    <div class="form-group col-sm-1">
+                        <input type="number" name="sem6" id="sem6" class="form-control">
+                    </div>
+                    <label for="" class="col-sm-1 col-form-label offset-1">Sem 7:</label>
+                    <div class="form-group col-sm-1">
+                        <input type="number" name="sem7" id="sem7" class="form-control">
+                    </div>
+                    <label for="" class="col-sm-1 col-form-label offset-1">Sem 8:</label>
+                    <div class="form-group col-sm-1">
+                        <input type="number" name="sem8" id="sem8" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <div class="form-row">
+        <div class="col mb-3 text-right">
+            <button class="btn btn-primary btn-sm" type="button" id="addEducation">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path fill-rule="evenodd"
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>&nbsp;
+                Add Education Field
+            </button>
+        </div>
+    </div>
+    <div class="row edu-row">
+        <div class="col-sm-12 edu-spinner-col">
+            <div class="text-center" id="edu-spinner">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="form-row mt-3 edu-fail">
+        <div class="col">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>There was an error while saving your data!</strong> Please Enter your data again.
+            </div>
+        </div>
+    </div>
+
+    <div class="edu-success-1">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center success mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">Your data has been saved successfully!!</p>
+                        <p class="lead">Click the button below to update your data!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="updateBasic">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="edu-success-2">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center success mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">Your data is already saved!!</p>
+                        <p class="lead">Click the button below to update your data!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="updateBasic">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="edu-error">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center error mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">An Error occured while fetching your data!!</p>
+                        <p class="lead">Please Refresh The Page!!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="refresh">Refresh Page</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
