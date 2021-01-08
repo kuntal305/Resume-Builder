@@ -1,0 +1,27 @@
+.avatar {
+    vertical-align: middle;
+    width: 12rem;
+    border-radius: 50%;
+}
+
+.profile hr {
+    border: 1px solid rgba(48, 55, 57, 0.5);
+
+}
+
+.name,
+#saveProfileName,
+#cancelProfileName,
+.pwd,
+#saveProfilePass,
+#cancelProfilePass {
+    display: none;
+}
+
+.text-danger {
+    font-size: 0.7rem;
+}
+
+#profilePassword {
+    
+}

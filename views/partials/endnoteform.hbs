@@ -1,0 +1,49 @@
+<div class="form-div">
+    <form id="endnote-form">
+        <div class="form-row">
+            <label for="place" class="col-sm-2 col-form-label"><strong>Place:</strong></label>
+            <div class="form-group col-sm-3">
+                <input type="text" id="place" name="place" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="signimg" class="col-sm-2 col-form-label"><strong>Digital Signature:</strong></label>
+            <div class="form-group col-sm-3">
+                <input type="text" class="form-control" name="digSign" id="digSign">
+            </div>
+        </div>
+    </form>
+
+    <div class="form-row end-note-save">
+        <div class="col text-right">
+            <button class="btn btn-success btn-sm" id="saveEndNote">Save</button>
+        </div>
+    </div>
+
+    <div class="end-success-1">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center success mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">Your data has been saved successfully!!</p>
+                        <p class="lead">Click the button below to update your data!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="updateEnd">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="end-fail">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center fail mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">An Error occured while saving your data!!</p>
+                        <p class="lead">Please Enter your Details Again!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="enterEnd">Re-Enter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

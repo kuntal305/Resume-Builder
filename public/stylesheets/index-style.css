@@ -5,48 +5,27 @@
 }
 
 .success-message {
-  position: absolute;
   max-width: 40rem;
-  margin: auto;
-  transform: translate(101%, -650%);
-  -webkit-transform: translate(101%, -650%);
-  -moz-transform: translate(101%, -650%);
-  -ms-transform: translate(101%, -650%);
-  -o-transform: translate(101%, -650%);
+  margin: 0 auto;
+  text-align: center;
+  transform: translateY(-20rem);
+  -webkit-transform: translateY(-20rem);
+  -moz-transform: translateY(-20rem);
+  -ms-transform: translateY(-20rem);
+  -o-transform: translateY(-20rem);
 }
 
-.warning-message-1 {
-  position: absolute;
-  max-width: 40rem;
-  margin: auto;
-  transform: translate(243%, -650%);
-  -webkit-transform: translate(243%, -650%);
-  -moz-transform: translate(243%, -650%);
-  -ms-transform: translate(243%, -650%);
-  -o-transform: translate(243%, -650%);
+.warning-message {
+  max-width: 20rem;
+  margin: 0 auto;
+  text-align: center;
+  transform: translateY(-20rem);
+  -webkit-transform: translateY(-20rem);
+  -moz-transform: translateY(-20rem);
+  -ms-transform: translateY(-20rem);
+  -o-transform: translateY(-20rem);
 }
 
-.warning-message-2 {
-  position: absolute;
-  max-width: 40rem;
-  margin: auto;
-  transform: translate(270%, -650%);
-  -webkit-transform: translate(270%, -650%);
-  -moz-transform: translate(270%, -650%);
-  -ms-transform: translate(270%, -650%);
-  -o-transform: translate(270%, -650%);
-}
-
-.warning-message-3 {
-  position: absolute;
-  max-width: 40rem;
-  margin: auto;
-  transform: translate(255%, -650%);
-  -webkit-transform: translate(255%, -650%);
-  -moz-transform: translate(255%, -650%);
-  -ms-transform: translate(255%, -650%);
-  -o-transform: translate(255%, -650%);
-}
 
 /* ============ HEADER ============ */
 
@@ -79,7 +58,7 @@
   border: 1px solid black;
   width: 30rem;
   height: 25rem;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   transform: translateY(-30%);
   -webkit-transform: translateY(-30%);
@@ -184,11 +163,11 @@
 
 /* ============ BODY ============ */
 
-.row {
+.index-row {
   padding-top: 3.12em;
 }
 
-.card {
+.creator-card .card {
   width: 15.6rem;
   height: 21.8rem;
   z-index: 1;

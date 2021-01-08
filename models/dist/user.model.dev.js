@@ -9,11 +9,11 @@ var model = {
   login: function login(input, cb) {
     return db.query('CALL user_login(? ,?)', [input.email, input.password], cb);
   },
-  searchEmail: function searchEmail(email, cb) {
-    return db.query('SELECT EXISTS (SELECT * FROM user u WHERE u.email = ?) as res', [email], cb);
+  findUserByEmail: function findUserByEmail(email, cb) {
+    return db.query('SELECT id, first_name, last_name, email, password FROM user WHERE email = ?', [email], cb);
   },
-  searchPassword: function searchPassword(email, cb) {
-    return db.query('SELECT password FROM user WHERE email = ?', [email], cb);
+  findUserById: function findUserById(id, cb) {
+    return db.query('SELECT id, first_name, last_name, email, password FROM user WHERE id = ?', [id], cb);
   }
 };
 module.exports = model;

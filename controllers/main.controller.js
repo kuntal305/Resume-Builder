@@ -1,7 +1,12 @@
 
 const mainController = {
     getHomePage: (req, res) => {
-        res.render('index', {title: 'Resume Builder'});
+        // console.log(req.flash('incorrectEmail'));
+        res.render('index', {
+            title: "Resume Builder",
+            successMessage: req.flash('successMessage'),
+            warningMessage: req.flash('warningMessage')
+        });
     },
     redirectToHome: (req, res) => {
         res.redirect('/');

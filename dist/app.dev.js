@@ -12,6 +12,8 @@ var logger = require('morgan');
 
 var app = express();
 
+var passportConfig = require('./passport');
+
 var indexRouter = require('./routes/index');
 
 var handlebars = require('express-handlebars');
@@ -25,8 +27,9 @@ var FileStore = require('session-file-store')(session);
 
 var passport = require('passport');
 
-var flash = require('connect-flash'); // view engine setup
+var flash = require('connect-flash');
 
+passportConfig(passport); // view engine setup
 
 app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs', handlebars({
@@ -39,12 +42,9 @@ app.use(session({
     return uuidv4();
   },
   store: new FileStore(),
-  secret: 'SECRET',
+  secret: 'qwertyuiop123456789',
   resave: true,
-  saveUninitialized: true,
-  cookie: {
-    maxAge: 100 * 60 * 60 * 24 * 30
-  }
+  saveUninitialized: true
 }));
 app.use(flash());
 app.use(passport.initialize());

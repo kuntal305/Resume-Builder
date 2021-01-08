@@ -1,0 +1,77 @@
+{{>profileHeader}}
+{{>sidenav}}
+
+<div>
+    <div class="main">
+        <div class="form-header">
+            <h2>PROFILE</h2>
+        </div>
+
+        <div class="container profile">
+            <div class="row mb-3">
+                <div class="col text-center">
+                    <img src="https://www.generationsforpeace.org/wp-content/uploads/2016/10/dummy-member.jpg" class="avatar"
+                        loading="lazy">
+            
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-outline-primary" type="button">Change Profile Picture</button>
+                    {{!-- <input type="file" class="form-file-input col-sm-9" style="display: none;" name="profilephoto" id="profilephoto" accept="image/*"> --}}
+                    
+                </div>
+            </div>
+            <hr>
+            <div class="row mb-3">
+                <label for="profileName" class="col-sm-2"><strong>Name:</strong></label>
+                <div class="col-sm-3" id="nameSpan">
+                    <span>{{firstname}}&nbsp;{{lastname}}</span>
+                </div>
+                <div class="col-sm-3 name">
+                    <input type="text" class="form-control input-sm" id="profileFirstName" name="profileFirstName" placeholder="First Name">
+                </div>
+                <div class="col-sm-3 name">
+                    <input type="text" class="form-control input-sm" id="profileLastName" name="profileLastName" placeholder="Last Name">
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-info btn-sm" id="changeProfileName" type="button">Change</button>
+                    <button class="btn btn-outline-success btn-sm" id="saveProfileName" type="button">Save</button>
+                    <button class="btn btn-danger btn-sm" id="cancelProfileName" type="button">Cancel</button>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="" class="col-sm-2 col-form-label"><strong>Email ID:</strong></label>
+                <div class="col-sm-3">
+                    <span>kuntalmitra305@gmail.com</span>
+                </div>
+                <div class="col-sm-3">
+                    <span class="text-danger">*Cannot be Changed</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="" class="col-sm-2 col-form-label"><strong>Password:</strong></label>
+                <div class="col-sm-3" id="profilePassword">
+                    {{!-- <span>Rb@12345</span> --}}
+                    <span>********</span>
+                </div>
+                <div class="col-sm-3 pwd">
+                    <input type="password" class="form-control input-sm" id="profileOldPass" name="profileOldPass"
+                        placeholder="Old Password">
+                </div>
+                <div class="col-sm-3 pwd">
+                    <input type="password" class="form-control input-sm" id="profileNewPass" name="profileNewPass"
+                        placeholder="New Password">
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-info btn-sm" id="changeProfilePass" type="button">Change</button>
+                    <button class="btn btn-outline-success btn-sm" id="saveProfilePass" type="button">Save</button>
+                    <button class="btn btn-danger btn-sm" id="cancelProfilePass" type="button">Cancel</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    {{!-- {{>footer}} --}}
+</div>

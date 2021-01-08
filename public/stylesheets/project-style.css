@@ -1,0 +1,11 @@
+.project {
+    height: 7rem;
+    width: 15rem;
+
+}
+
+.project .card-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

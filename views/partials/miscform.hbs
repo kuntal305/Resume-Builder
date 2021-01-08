@@ -1,0 +1,77 @@
+<div class="form-div">
+
+    <form id="misc-form">
+
+        <div class="form-row">
+            <label for="skills" class="col-sm-3 col-form-label">Skills:</label>
+            <div class="form-group col">    
+                <input type="text" class="form-control" id="skills" placeholder="Separate the skills using a comma(,)">
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="traits" class="col-sm-3 col-form-label">Traits:</label>
+            <div class="form-group col">    
+                <input type="text" class="form-control" id="traits" placeholder="Separate the traits using a comma(,)">
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="languages" class="col-sm-3 col-form-label">Languages:</label>
+            <div class="form-group col">
+                <select name="languages" id="languages" class="form-control" >
+                    <option value="Hindi">Hindi</option>
+                    <option value="English">English</option>
+                    <option value="Bengali">Bengali</option>
+                    <option value="Tamil">Tamil</option>
+                </select>
+            </div>
+        </div>
+        
+        
+        <div class="form-row">
+            <label for="hobbies" class="col-sm-3 col-form-label">Hobbies:</label>
+            <div class="form-group col">
+                <input type="text" class="form-control" id="hobbies" placeholder="Separate the hobbies using a comma(,)">
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="objective" class="col-sm-3 col-form-label">Objective:</label>
+            <div class="form-group col">
+                <textarea name="objective" id="objective" class="form-control" cols="30" rows="1" placeholder="Please Type the Objective for your Resume"></textarea>
+            </div>
+        </div>
+    </form> 
+
+
+    <div class="form-row misc-save">
+        <div class="col text-right">
+            <button class="btn btn-success btn-sm" id="saveMisc">Save</button>
+        </div>
+    </div>
+
+    <div class="misc-success-1">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center success mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">Your data has been saved successfully!!</p>
+                        <p class="lead">Click the button below to update your data!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="updateMisc">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="misc-fail">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center fail mx-auto">
+                    <div class="card-body">
+                        <p class="card-title">An Error occured while saving your data!!</p>
+                        <p class="lead">Please Enter your Details Again!</p>
+                        <button class="btn btn-primary btn-block btn-sm" type="button" id="enterMisc">Re-Enter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
